@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY resources ./resources
-COPY vite.config.js ./
+COPY vite.config.js tailwind.config.js postcss.config.js ./
 COPY public ./public
 RUN npm run build
 
